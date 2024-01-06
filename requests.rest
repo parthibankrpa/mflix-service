@@ -1,0 +1,17 @@
+GET http://localhost:3000/mflix/users
+
+###
+
+GET http://localhost:3000/mflix/users/59b99db4cfa9a34dcd7885b6
+
+###
+
+
+POST  http://localhost:3000/mflix/users 
+Content-Type: application/json
+
+{
+    "name":"parthibank",
+    "email":"myemail.parthiban",
+    "password":"password"
+}
