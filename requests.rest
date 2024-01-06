@@ -1,4 +1,4 @@
-GET http://localhost:3000/mflix/users
+GET http://localhost:3000/users
 
 ###
 
@@ -15,3 +15,6 @@ Content-Type: application/json
     "email":"myemail.parthiban",
     "password":"password"
 }
+
+###
+GET https://mflix-5cf1.onrender.com/users

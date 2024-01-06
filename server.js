@@ -1,5 +1,7 @@
 require("dotenv").config();
 const express = require("express");
+const morgan = require("morgan");
+
 const app = express();
 const mongoose = require("mongoose");
 const mflixRoutes = require("./routes/mflixroutes");
@@ -7,6 +9,7 @@ const mflixRoutes = require("./routes/mflixroutes");
 printIP();
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
+app.use(morgan("tiny"));
 
 db.on("error", (error) => {
   console.log(`error on connecting db ${error}`);
@@ -17,7 +20,7 @@ db.once("open", () => {
 });
 
 app.use(express.json());
-app.use("/mflix/users", mflixRoutes);
+app.use("/users", mflixRoutes);
 
 app.listen(3000, () => {
   // printIP();
