@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require("mongoose");
 const mflixRoutes = require("./routes/mflixroutes");
 
+printIP();
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
 
