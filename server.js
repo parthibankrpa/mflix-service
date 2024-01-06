@@ -20,7 +20,7 @@ app.use(express.json());
 app.use("/mflix/users", mflixRoutes);
 
 app.listen(3000, () => {
-  printIP();
+  // printIP();
   console.log("Server started with 3000", process.env["USERNAME"]);
 });
 
